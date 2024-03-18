@@ -5,17 +5,18 @@ def calc(number: int, value: float, next: int) -> float:
         return [value - (4 / next), next + 2]
     
 
-next: int = 1
-result: float = 0
-i: int = 1
+if __name__ == '__main__':
+    next: int = 1
+    result: float = 0
+    i: int = 1
 
-while True:
-    result, next = calc(i, result, next)
+    while True:
+        result, next = calc(i, result, next)
 
-    if i < 100000000:
-        i += 1
-    else:
-        break
+        if i < 100000000:
+            i += 1
+        else:
+            break
     
     
-print(result, i * 2)
+    print(result, i * 2)
