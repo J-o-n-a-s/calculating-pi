@@ -1,9 +1,9 @@
-def calc(number: int, value: float, next: int) -> float:
-    if number % 2 != 0:
-        return [value + (4 / next), next + 2]
+def calc(p_number: int, p_value: float, p_next: int) -> list:
+    if p_number % 2 != 0:
+        return [p_value + (4 / p_next), p_next + 2]
     else:
-        return [value - (4 / next), next + 2]
-    
+        return [p_value - (4 / p_next), p_next + 2]
+
 
 if __name__ == '__main__':
     next: int = 1
@@ -13,10 +13,9 @@ if __name__ == '__main__':
     while True:
         result, next = calc(i, result, next)
 
-        if i < 100000000:
+        if i < 1000000000:
             i += 1
         else:
             break
-    
-    
+
     print(result, i * 2)
